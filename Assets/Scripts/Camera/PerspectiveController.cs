@@ -27,13 +27,13 @@ public class PerspectiveController : MonoBehaviour
     {
         if (_perspectiveDropdown.value == 0)
         {
-            _destinationPosition = _firstPersonPosition;
-            _destinationRotation = Vector3.zero;
+            _destinationPosition = _thirdPersonPosition;
+            _destinationRotation = _thirdPersonRotation;
         }
         else
         {
-            _destinationPosition = _thirdPersonPosition;
-            _destinationRotation = _thirdPersonRotation;
+            _destinationPosition = _firstPersonPosition;
+            _destinationRotation = Vector3.zero;
         }
     }
 
