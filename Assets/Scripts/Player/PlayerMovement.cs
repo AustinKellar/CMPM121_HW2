@@ -43,21 +43,22 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = _previousFrameRotation;
         }
 
-        Vector3 movement = transform.forward * _input.ForwardMovement;
-
+        Vector3 movement;
         if (_input.IsSprinting)
         {
-            _rigidbody.MovePosition(transform.position + movement * _sprintingSpeed);
-
+            movement = transform.forward * _input.ForwardMovement * _sprintingSpeed;
         }
         else
         {
-            _rigidbody.MovePosition(transform.position + movement * _walkingSpeed);
+            movement = transform.forward * _input.ForwardMovement * _walkingSpeed;
         }
 
+        Debug.Log(_input.Jump);
         if (_input.Jump && _grounded.IsGrounded)
         {
-            _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
+            movement.y += _jumpForce;
         }
+
+        _rigidbody.velocity += movement;
     }
 }

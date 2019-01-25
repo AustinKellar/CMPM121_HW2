@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _directionRange: 360
+  _timeToDisappear: 2
 --- !u!54 &2768217986726886287
 Rigidbody:
   m_ObjectHideFlags: 0
