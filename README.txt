@@ -18,3 +18,8 @@ Notes:
   - The Asset's given code is in Assets/Medieval_Toon_Character/Source/Scripts
   - All of my own scripts are in Assets/Scripts
   - My movement scripts are in Assets/Scripts/Player (PlayerMovement.cs / PlayerInput.cs)
+- The chicken movement code is also my own. You can see the script under Assets/Scripts/Chickens/ChickenMovement.cs
+
+
+
+PSSSST There is a surprise if you collect all of the chickens!

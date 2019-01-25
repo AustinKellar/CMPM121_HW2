@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rigidbody;
 
     private RigidbodyConstraints _defaultConstraints;
-    private RigidbodyConstraints _freezeY;
 
     private void Awake()
     {
