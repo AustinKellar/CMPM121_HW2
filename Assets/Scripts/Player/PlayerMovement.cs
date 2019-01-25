@@ -53,7 +53,6 @@ public class PlayerMovement : MonoBehaviour
             movement = transform.forward * _input.ForwardMovement * _walkingSpeed;
         }
 
-        Debug.Log(_input.Jump);
         if (_input.Jump && _grounded.IsGrounded)
         {
             movement.y += _jumpForce;
