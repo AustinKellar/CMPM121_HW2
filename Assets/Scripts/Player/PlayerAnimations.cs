@@ -41,6 +41,6 @@ public class PlayerAnimations : MonoBehaviour
 
         _animator.SetFloat("Turn", _input.RotationalMovement);
 
-        _animator.SetBool("Jump", !_grounded.IsGrounded);
+        _animator.SetBool("Jump", _input.Jump && _grounded.IsGrounded);
     }
 }

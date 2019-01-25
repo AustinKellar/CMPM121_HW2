@@ -35,7 +35,7 @@ public class ChickenSpawner : MonoBehaviour
 
     public void SpawnSuperChicken()
     {
-        Vector3 position = new Vector3(0, 5, 0);
+        Vector3 position = new Vector3(Random.Range(-42, 42), 5, Random.Range(-42, 42));
         Vector3 eulerAngles = Vector3.zero;
 
         GameObject superChicken = Instantiate(_chicken, position, Quaternion.Euler(eulerAngles));

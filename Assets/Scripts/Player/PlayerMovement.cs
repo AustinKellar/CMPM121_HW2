@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerGrounded _grounded;
     private Rigidbody _rigidbody;
 
-    private Vector3 _previousFrameRotation;
+    private RigidbodyConstraints _defaultConstraints;
+    private RigidbodyConstraints _freezeY;
 
     private void Awake()
     {
@@ -31,16 +32,21 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        _defaultConstraints = _rigidbody.constraints;
+    }
+
     private void FixedUpdate()
     {
         if (_input.RotationalMovement > 0.1f || _input.RotationalMovement < -0.1f)
         {
+            _rigidbody.constraints = _defaultConstraints;
             transform.Rotate(new Vector3(0, _input.RotationalMovement, 0) * _rotationSpeed);
-            _previousFrameRotation = transform.eulerAngles;
         }
         else
         {
-            transform.eulerAngles = _previousFrameRotation;
+            _rigidbody.freezeRotation = true;
         }
 
         Vector3 movement;

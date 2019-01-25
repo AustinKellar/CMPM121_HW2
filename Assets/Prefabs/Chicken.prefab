@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 1295398826}
   - component: {fileID: 1295398825}
   - component: {fileID: 1295398828}
+  - component: {fileID: 792796070218626640}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Chicken
@@ -216,6 +217,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.03, y: 1.46, z: 1.36}
   m_Center: {x: 0, y: 0.56, z: 0.43}
+--- !u!114 &792796070218626640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295398824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95dd6b36b7256147b89f30aeedaf160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0.003
+  _maxDestinationChangeCooldown: 20
+  _xRange: 38
+  _yRange: 5
+  _zRange: 38
 --- !u!1 &1533890981
 GameObject:
   m_ObjectHideFlags: 0
